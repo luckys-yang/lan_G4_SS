@@ -35,7 +35,7 @@
 #define NULLER 0	//无
 
 //时 分 秒 无 索引
-#define H_INDEX	1	
+#define H_INDEX	1
 #define M_INDEX	2
 #define S_INDEX	3
 #define NULL_INDEX	0
@@ -43,28 +43,26 @@
 //时间
 typedef struct
 {
-	signed char Hour;
-	signed char Min;
-	signed char Sec;
-}TIMER_TypeDef;
+    uint8_t Hour;
+    uint8_t Min;
+    uint8_t Sec;
+} TIMER_TypeDef;
 
 typedef struct
 {
-	uint8_t WZ_State;	//当前位置(1~5)
-	uint8_t One_Read_State;	//上电读取标志位
-	bool KEY1_Short_Flag;	//按键1短按标志位
-	bool KEY2_Short_Flag;	//按键2短按标志位
-	bool KEY2_Long_Flag;	//按键2长按标志位
-	bool KEY3_Short_Flag;	//按键3短按标志位
-	bool KEY3_Long_Flag;	//按键3长按标志位
-	bool KEY4_Short_Flag;	//按键4短按标志位
-	bool KEY4_Long_Flag;	//按键4长按标志位	
-	uint8_t Now_State;	//当前状态(STANDBY  SETTING  RUNNING  PAUSE  NULLER)
-	uint8_t LCD_HIGH_State;	//高亮
-	uint16_t TIMERT_1S_Count;	//秒计数
-	
-	
-}DATA_TypeDef;
+    uint8_t WZ_State;	//当前位置(1~5)
+    uint8_t One_Read_State;	//上电读取标志位
+    bool KEY1_Short_Flag;	//按键1短按标志位
+    bool KEY2_Short_Flag;	//按键2短按标志位
+    bool KEY2_Long_Flag;	//按键2长按标志位
+    bool KEY3_Short_Flag;	//按键3短按标志位
+    bool KEY3_Long_Flag;	//按键3长按标志位
+    bool KEY4_Short_Flag;	//按键4短按标志位
+    bool KEY4_Long_Flag;	//按键4长按标志位
+    uint8_t Now_State;	//当前状态(STANDBY  SETTING  RUNNING  PAUSE  NULLER)
+    uint8_t LCD_HIGH_State;	//高亮
+    uint16_t TIMERT_1S_Count;	//秒计数
+} DATA_TypeDef;
 
 extern DATA_TypeDef Data;
 
@@ -74,11 +72,11 @@ extern DATA_TypeDef Data;
 void Flag_function(void);
 void LCD_function(void);
 void TASK_Init(void);
-void LED_DIS(uint8_t num,uint8_t swch);
-void EEPROM_Read(uint8_t addr,uint8_t *data,uint8_t len);
-void EEPROM_Write(uint8_t addr,uint8_t *Data,uint8_t len);
-void Read_Time(TIMER_TypeDef *tim,uint8_t addr);
-void Write_Time(TIMER_TypeDef *tim,uint8_t addr);
+void LED_DIS(uint8_t num, uint8_t swch);
+void EEPROM_Read(uint8_t addr, uint8_t *data, uint8_t len);
+void EEPROM_Write(uint8_t addr, uint8_t *Data, uint8_t len);
+void Read_Time(TIMER_TypeDef *tim, uint8_t addr);
+void Write_Time(TIMER_TypeDef *tim, uint8_t addr);
 uint8_t KEY_pro(void);
 void KEY_function(void);
 void KEY1_Short_function(void);

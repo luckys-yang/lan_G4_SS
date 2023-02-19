@@ -758,19 +758,19 @@ void Write_Time(TIMER_TypeDef *tim, uint8_t addr)
 void Timer_CountDown(TIMER_TypeDef *timx)
 {
     timx->Sec--;
-    if(timx->Sec < 0)	//注意溢出
+    if(timx->Sec == 255)	//注意溢出，无符号0之后变255
     {
         timx->Min--;
         timx->Sec = 59;
     }
-    if(timx->Min < 0)
+    if(timx->Min == 255)
     {
         timx->Hour--;
         timx->Min = 59;
     }
 
 
-    if((timx->Hour <= 0) && (timx->Min <= 0) && (timx->Sec <= 0))	//停止
+    if((timx->Hour == 255) && (timx->Min == 59) && (timx->Sec == 59))	//停止 0:0:0 再减1 就是 255:59:59
     {
         //恢复初值
         timx->Hour = TIM_TEMP.Hour;
