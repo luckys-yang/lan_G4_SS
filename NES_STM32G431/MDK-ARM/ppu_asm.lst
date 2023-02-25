@@ -1,0 +1,46 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         
+    3 00000000                 AREA             ppu_code, CODE, READONLY
+    4 00000000         
+    5 00000000         
+    6 00000000         
+    7 00000000         
+    8 00000000         
+    9 00000000         
+   10 00000000         
+   11 00000000         
+   12 00000000         
+   13 00000000         
+   14 00000000         
+   15 00000000         
+   16 00000000         
+   17 00000000                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=nes_stm32g431\ppu_asm.d -ones_stm32g431\ppu_asm.o -I.\RTE\_N
+ES_STM32G431 -IC:\Users\44478\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Cor
+e\Include -IC:\Users\44478\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.2.0\Dri
+vers\CMSIS\Device\ST\STM32G4xx\Include --predefine="__MICROLIB SETA 1" --predef
+ine="__UVISION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine="STM32G
+431xx SETA 1" --predefine="_RTE_ SETA 1" --list=ppu_asm.lst ..\NES\ppu_asm.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ppu_code 00000000
+
+Symbol: ppu_code
+   Definitions
+      At line 3 in file ..\NES\ppu_asm.s
+   Uses
+      None
+Comment: ppu_code unused
+1 symbol
+335 symbols in table
