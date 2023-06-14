@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "my.h": "c",
+        "allhead.h": "c",
+        "system_init.h": "c",
+        "sstream": "c",
+        "i2c_hal.h": "c",
+        "string": "c",
+        "array": "c",
+        "string_view": "c"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Disabled", //需要添加的
+    "C_Cpp.intelliSenseEngine": "Tag Parser",  //  需要添加的
+}
